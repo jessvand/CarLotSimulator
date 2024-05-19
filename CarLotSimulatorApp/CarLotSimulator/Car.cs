@@ -16,38 +16,32 @@ namespace CarLotSimulator
         public int Year { get; set; }
         public string Make { get; set; }
         public string Model { get; set; }
-        public string EngineNoise {  get; set; }
-        public string HonkNoise {  get; set; }
+        public string EngineNoise { get; set; }
+        public string HonkNoise { get; set; }
         public bool IsDriveable { get; set; }
 
-           
-        
+
         public void MakeEngineNoise(string engineNoise)
         {
-            Console.WriteLine( $"My Toyota Camry's {engineNoise} is concerning!" );
+            Console.WriteLine($"{Year} {Make} {Model}'s engine sounds like {engineNoise} and it is concerning!");
         }
 
         public void MakeHonkNoise(string honkNoise)
         {
-            Console.WriteLine($"My Chevrolet Cobalt's {honkNoise} is audaciously obnoxious!");
+            Console.WriteLine($"{Year} {Make} {Model}'s horn sounds like {honkNoise} and it is audaciously obnoxious!");
 
         }
 
-        public void ShirleyTilda(string Make)
+  
+        public Car()
         {
-           Console.WriteLine($"ShirleyTilda is a {Make}");
+            CarLot._numberOfCars++;
+            
         }
-        public void BubbaTruck(string Model)
-        {
-            Console.WriteLine($"BubbaTruck is a Chevrolet {Model}");
-        }
+            
+    
 
-        public void DorothyChristophe(string isDriveable)
-        {
-            Console.WriteLine($"BubbaTruck is a Chevrolet {isDriveable}");
-        }
-
-        public Car(int year, string make, string model, string engineNoise, string honkNoise, bool isDriveable)
+        public Car(int year,  string make,  string model,  string engineNoise,  string honkNoise,  bool isDriveable)
         {
             Year = year;
             Make = make;
@@ -56,10 +50,10 @@ namespace CarLotSimulator
             HonkNoise = honkNoise;
             IsDriveable = isDriveable;
 
+            CarLot._numberOfCars++;
+
         }
 
-        public Car()
-        {
-        }
+        
     }
 }
