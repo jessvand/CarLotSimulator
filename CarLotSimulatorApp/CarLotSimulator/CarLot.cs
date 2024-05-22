@@ -17,7 +17,7 @@ namespace CarLotSimulator
 
             foreach(var car in ParkingLot)
             {
-                CarLot._numberOfCars++;
+                
                 car.MakeEngineNoise(car.EngineNoise);
                 car.MakeHonkNoise(car.HonkNoise);
 
