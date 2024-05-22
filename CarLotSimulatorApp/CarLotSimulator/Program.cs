@@ -37,14 +37,9 @@ namespace CarLotSimulator
                 ShirleyTilda.IsDriveable = false;
             };
             carLotOne.ParkingLot.Add(ShirleyTilda);
-            carLotOne.CheckCarLot();
-
-
-            //Object initializer syntax
+            
 
             var BubbaTruck = new Car();
-         
-
             {
                 
                 BubbaTruck.Make = "Chevrolet";
@@ -56,10 +51,9 @@ namespace CarLotSimulator
             };
 
             carLotOne.ParkingLot.Add(BubbaTruck);
-            carLotOne.CheckCarLot();
+            
 
-            Console.WriteLine($"The number of cars in the car lot {CarLot._numberOfCars}");
-
+            
             var DorothyChristophe = new Car();
             {
 
@@ -73,13 +67,14 @@ namespace CarLotSimulator
 
             carLotOne.ParkingLot.Add(DorothyChristophe);         
 
-            Console.WriteLine($"The number of cars in the car lot {CarLot._numberOfCars}");
-            
+                       
 
             //custom constuctor
             var TaylorQuick = new Car(2024,"Toyota","Avalon", "pssssst", "beep", true );
                         
             carLotOne.ParkingLot.Add(TaylorQuick);
+
+            carLotOne.CheckCarLot();
 
             Console.WriteLine($"The Number of cars in car lot {CarLot._numberOfCars}");
 
